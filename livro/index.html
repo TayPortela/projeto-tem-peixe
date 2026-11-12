@@ -1,0 +1,809 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#111111">
+
+<meta name="description" content="Tem Peixe. Você sabe Pescar? Um livro de Taynara Portela sobre pescaria, negócios, liderança, marketing, vendas e oportunidades. Acompanhe o pré-lançamento.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tem Peixe. Você sabe Pescar? | Taynara Portela">
+<meta property="og:description" content="Isso não será sobre pescaria. Pelo menos, não apenas sobre ela.">
+<meta property="og:image" content="https://www.projetotempeixe.com.br/imagens/capa-original.png">
+<meta property="og:url" content="https://www.projetotempeixe.com.br/livro/">
+
+<title>Tem Peixe. Você sabe Pescar? | O Livro</title>
+<link rel="icon" href="../imagens/logo-tp.png">
+
+<style>
+:root {
+    --black: #111111;
+    --dark: #171717;
+    --gold: #d6a83e;
+    --gold-dark: #a77b21;
+    --white: #ffffff;
+    --light: #f7f5f0;
+    --text: #454545;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--white);
+    color: var(--black);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.75;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+.shell {
+    width: min(1160px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+.eyebrow {
+    display: block;
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+h1, h2, h3, p {
+    margin-top: 0;
+}
+
+h1, h2 {
+    line-height: 1.18;
+    letter-spacing: -1px;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 27px;
+    background: var(--gold);
+    color: #111;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background .2s, transform .2s;
+}
+
+.button:hover {
+    background: #ebbf58;
+    transform: translateY(-2px);
+}
+
+a:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 4px;
+}
+
+/* CABEÇALHO */
+
+.topbar {
+    background: #111;
+    color: white;
+    border-bottom: 1px solid #333;
+}
+
+.nav {
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.brand img {
+    width: 53px;
+    height: 53px;
+    object-fit: contain;
+}
+
+.nav-link {
+    color: #ddd;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: var(--gold);
+}
+
+/* ABERTURA DO LIVRO */
+
+.hero {
+    background: #151515;
+    color: white;
+    padding: 80px 0 95px;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.hero-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 570px;
+    max-height: 540px;
+    object-fit: contain;
+}
+
+.hero-copy h1 {
+    font-size: clamp(36px, 4.3vw, 60px);
+    margin: 22px 0;
+}
+
+.hero-copy h1 em {
+    color: var(--gold);
+    font-style: normal;
+}
+
+.hero-intro {
+    color: #dedede;
+    font-size: 20px;
+    line-height: 1.7;
+    margin-bottom: 32px;
+}
+
+.hero-note {
+    display: block;
+    color: #aaa;
+    font-size: 12px;
+    margin-top: 17px;
+}
+
+/* CONVERSA COM O LEITOR */
+
+.letter-section {
+    background: white;
+    padding: 105px 0;
+}
+
+.letter {
+    max-width: 770px;
+    margin: auto;
+}
+
+.letter .eyebrow {
+    color: var(--gold-dark);
+}
+
+.letter h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(30px, 3.8vw, 44px);
+    font-weight: normal;
+    line-height: 1.35;
+    margin: 25px 0 38px;
+}
+
+.letter p {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 19px;
+    line-height: 1.95;
+    color: var(--text);
+    margin-bottom: 27px;
+}
+
+.letter .signature {
+    color: var(--gold-dark);
+    font-style: italic;
+    margin-top: 45px;
+}
+
+/* ASSUNTOS DO LIVRO */
+
+.themes {
+    background: var(--light);
+    padding: 90px 0;
+    text-align: center;
+}
+
+.themes-inner {
+    max-width: 800px;
+    margin: auto;
+}
+
+.themes .eyebrow {
+    color: var(--gold-dark);
+}
+
+.themes h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(29px, 4vw, 43px);
+    font-weight: normal;
+    line-height: 1.35;
+    margin: 22px 0 25px;
+}
+
+.themes p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 35px;
+}
+
+.theme-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.theme-list span {
+    padding: 10px 18px;
+    border: 1px solid #d6c7a7;
+    border-radius: 30px;
+    font-size: 13px;
+    color: #333;
+}
+
+/* PRÉ-LANÇAMENTO E FORMULÁRIO */
+
+.signup {
+    background: white;
+    padding: 100px 0 110px;
+    text-align: center;
+    scroll-margin-top: 25px;
+}
+
+.signup-inner {
+    max-width: 800px;
+    margin: auto;
+}
+
+.signup .eyebrow {
+    color: var(--gold-dark);
+}
+
+.signup h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(32px, 4vw, 46px);
+    font-weight: normal;
+    line-height: 1.3;
+    margin: 22px 0 25px;
+}
+
+.signup-description {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    color: #444;
+    max-width: 650px;
+    margin: 0 auto 45px;
+}
+
+/* FORMULÁRIO BREVO */
+
+.form-wrapper {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    overflow: visible;
+}
+
+.form-wrapper iframe {
+    display: block;
+    width: 100%;
+    height: 850px;
+    min-height: 850px;
+    border: none;
+    background: transparent;
+}
+
+/* RODAPÉ */
+
+.footer {
+    background: #111;
+    color: white;
+    padding: 45px 0 25px;
+    border-top: 1px solid #333;
+}
+
+.footer-inner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-brand img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+}
+
+.footer-brand p {
+    color: #ccc;
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-links a {
+    color: #ddd;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: var(--gold);
+}
+
+.copyright {
+    border-top: 1px solid #333;
+    margin-top: 35px;
+    padding-top: 20px;
+    color: #999;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* CELULAR */
+
+@media (max-width: 800px) {
+
+    .nav {
+        min-height: 75px;
+        gap: 12px;
+    }
+
+    .brand {
+        font-size: 11px;
+    }
+
+    .brand img {
+        width: 43px;
+        height: 43px;
+    }
+
+    .nav-link {
+        font-size: 11px;
+    }
+
+    .hero {
+        padding: 55px 0 70px;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .hero-image img {
+        max-height: 390px;
+    }
+
+    .hero-copy {
+        text-align: center;
+    }
+
+    .hero-copy h1 {
+        font-size: clamp(35px, 8vw, 48px);
+    }
+
+    .hero-intro {
+        font-size: 18px;
+    }
+
+    .letter-section {
+        padding: 70px 0;
+    }
+
+    .letter p {
+        font-size: 17px;
+        line-height: 1.9;
+    }
+
+    .themes {
+        padding: 70px 0;
+    }
+
+    .signup {
+        padding: 70px 0 80px;
+    }
+
+    .signup-description {
+        font-size: 17px;
+    }
+
+    .form-wrapper iframe {
+        height: 950px;
+        min-height: 950px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .button {
+        transition: none;
+    }
+}
+
+
+/* BOTÃO FLUTUANTE - VOLTAR AO TOPO */
+
+.back-to-top {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #d6a83e;
+    color: #111111;
+    border: none;
+    border-radius: 50%;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+    transition: opacity .3s, transform .3s, visibility .3s;
+    z-index: 999;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: #ebbf58;
+    transform: translateY(-3px);
+}
+
+.back-to-top:focus-visible {
+    outline: 3px solid #111111;
+    outline-offset: 3px;
+}
+
+@media (max-width: 800px) {
+    .back-to-top {
+        width: 44px;
+        height: 44px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- CABEÇALHO -->
+
+<header class="topbar">
+    <div class="shell nav">
+
+        <a class="brand" href="../">
+            <img src="../imagens/logo-tp.png" alt="Marca oficial TP">
+            <span>PROJETO TEM PEIXE</span>
+        </a>
+
+        <a class="nav-link" href="../index.html">
+            Conheça o projeto ↗
+        </a>
+
+    </div>
+</header>
+
+<main>
+
+<!-- ABERTURA COM MOCKUP DO LIVRO -->
+
+<section class="hero">
+    <div class="shell hero-grid">
+
+        <div class="hero-image">
+            <img
+                src="../imagens/mockup-livro-frente-verso.png"
+                alt="Mockup de frente e verso do livro Tem Peixe. Você sabe Pescar?"
+                fetchpriority="high"
+            >
+        </div>
+
+        <div class="hero-copy">
+
+            <span class="eyebrow">
+                UM LIVRO DE TAYNARA PORTELA
+            </span>
+
+            <h1>
+                Tem Peixe.<br>
+                <em>Você sabe Pescar?</em>
+            </h1>
+
+            <p class="hero-intro">
+                Isso não será sobre pescaria.
+                Pelo menos, não apenas sobre ela.
+            </p>
+
+            <a class="button" href="#inscricao">
+                QUERO ACOMPANHAR O LANÇAMENTO
+            </a>
+
+            <span class="hero-note">
+                Livro em preparação · Pré-lançamento
+            </span>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- CONVERSA COM O LEITOR -->
+
+<section class="letter-section">
+    <div class="shell">
+
+        <div class="letter">
+
+            <span class="eyebrow">
+                UMA CONVERSA ANTES DA PRIMEIRA PÁGINA
+            </span>
+
+            <h2>
+                Existe peixe no rio. Mas isso não
+                significa que todo mundo consiga pescá-lo.
+            </h2>
+
+            <p>
+                Quando cheguei ao Pantanal, minha intenção
+                era trabalhar com aquilo que eu já conhecia:
+                marketing, vendas e relacionamento com clientes.
+                Eu só não imaginava que esse lugar acabaria
+                me ensinando tanto sobre essas mesmas coisas.
+            </p>
+
+            <p>
+                Entre uma conversa e outra, ouvindo histórias
+                de pescadores, empresários e pessoas que
+                passaram por aqui, comecei a perceber que
+                muitas situações vividas no rio tinham uma
+                relação enorme com o que acontece nos negócios.
+            </p>
+
+            <p>
+                Foi assim que nasceu o
+                <strong>Tem Peixe. Você sabe Pescar?</strong>
+            </p>
+
+            <p>
+                Não escrevi um livro para ensinar alguém
+                a pescar. Escrevi sobre aquilo que comecei
+                a enxergar enquanto vivia cercada
+                pela pescaria.
+            </p>
+
+            <p>
+                E talvez, ao longo dessas páginas,
+                tu também comeces a olhar para algumas
+                oportunidades de um jeito diferente.
+            </p>
+
+            <p class="signature">
+                — Taynara Portela
+            </p>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- TEMAS DO LIVRO -->
+
+<section class="themes">
+    <div class="shell themes-inner">
+
+        <span class="eyebrow">
+            O QUE ENCONTRARÁ NESSAS PÁGINAS
+        </span>
+
+        <h2>
+            A pescaria é o ponto de partida.
+            As conexões vão muito além do rio.
+        </h2>
+
+        <p>
+            Ao longo do livro, experiências e situações
+            da pescaria se encontram com assuntos
+            que fazem parte da nossa vida e dos negócios.
+        </p>
+
+        <div class="theme-list">
+            <span>Liderança</span>
+            <span>Marketing</span>
+            <span>Vendas</span>
+            <span>Negócios</span>
+            <span>Pessoas</span>
+            <span>Estratégia</span>
+            <span>Oportunidades</span>
+        </div>
+
+    </div>
+</section>
+
+<!-- FORMULÁRIO DE PRÉ-LANÇAMENTO -->
+
+<section id="inscricao" class="signup">
+    <div class="shell signup-inner">
+
+        <span class="eyebrow">
+            PRÉ-LANÇAMENTO
+        </span>
+
+        <div class="form-wrapper">
+
+            <iframe
+                title="Cadastro para acompanhar o lançamento do livro Tem Peixe"
+                src="https://16559625.sibforms.com/v2/serve/MUIFAGQBGEs_9Dwe_tFCQLWaEYQpKZY189X7PVM2CmUMn8udz3IJoIKHpEr9gZMqbN9IkmbgQU3pPdLRS2BIlzbPBuy497Mm1_bF6UcRmnNzxnTbotKNcOtfbcfuAvMZVTahaK6eX5y4HHdRbcO9ZdvskyVOCcEolMqyvpaNF0mUNyncUQamhmvIacPLL3HYHYjAcHEQ0ZsZoWgoDQ=="
+                width="760"
+                height="850"
+                loading="lazy"
+                scrolling="no"
+                referrerpolicy="strict-origin-when-cross-origin"
+            ></iframe>
+
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+<!-- RODAPÉ -->
+
+<footer class="footer">
+    <div class="shell">
+
+        <div class="footer-inner">
+
+            <div class="footer-brand">
+
+                <img
+                    src="../imagens/logo-tp.png"
+                    alt="Marca oficial TP"
+                >
+
+                <p>
+                    Tem Peixe. Você sabe Pescar?<br>
+                    Um livro de Taynara Portela
+                </p>
+
+            </div>
+
+            <div class="footer-links">
+
+                <a href="../index.html">
+                    Conheça o Projeto Tem Peixe
+                </a>
+
+                <a href="../privacidade.html">
+                    Política de privacidade
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © <span id="year"></span> Taynara Portela.
+            Todos os direitos reservados.
+        </div>
+
+    </div>
+</footer>
+
+<!-- BOTÃO VOLTAR AO TOPO -->
+
+<button
+    id="backToTop"
+    class="back-to-top"
+    type="button"
+    aria-label="Voltar ao topo"
+    title="Voltar ao topo"
+>
+    ↑
+</button>
+
+
+<script>
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+/* BOTÃO VOLTAR AO TOPO */
+
+const backToTop = document.getElementById("backToTop");
+
+function updateBackToTop() {
+    backToTop.classList.toggle(
+        "visible",
+        window.scrollY > 300
+    );
+}
+
+window.addEventListener("scroll", updateBackToTop, {
+    passive: true
+});
+
+backToTop.addEventListener("click", function () {
+    window.scrollTo({
+        top: 0,
+        behavior: window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+        ).matches ? "auto" : "smooth"
+    });
+});
+
+updateBackToTop();
+
+
+</script>
+
+</body>
+</html>

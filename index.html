@@ -1,0 +1,1193 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#111111">
+
+<meta name="description" content="Projeto Tem Peixe. Você sabe Pescar? Experiências empresariais que conectam liderança, vendas, marketing, networking e pescaria esportiva no Pantanal.">
+
+<meta property="og:title" content="Projeto Tem Peixe | Você sabe Pescar?">
+<meta property="og:description" content="Uma experiência empresarial que conecta conhecimento, relacionamento e pescaria esportiva.">
+<meta property="og:image" content="https://www.projetotempeixe.com.br/imagens/capa-original.png">
+
+<title>Projeto Tem Peixe | Você sabe Pescar?</title>
+<link rel="icon" href="imagens/logo-tp.png">
+
+<style>
+:root {
+    --black: #111111;
+    --dark: #171717;
+    --gold: #d6a83e;
+    --white: #ffffff;
+    --muted: #c8c8c8;
+    --light: #f7f5f0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--black);
+    background: var(--white);
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+}
+
+.shell {
+    width: min(1160px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+.eyebrow {
+    display: block;
+    color: #a77b21;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+h1, h2, h3, p {
+    margin-top: 0;
+}
+
+h1, h2 {
+    line-height: 1.17;
+    letter-spacing: -1px;
+}
+
+h2 {
+    font-size: clamp(32px, 4.5vw, 55px);
+    margin: 20px 0 30px;
+}
+
+h2 em,
+h1 em {
+    color: var(--gold);
+    font-style: normal;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: var(--gold);
+    color: #111;
+    padding: 14px 26px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition: background .2s, transform .2s;
+}
+
+.button:hover {
+    background: #ebbf58;
+    transform: translateY(-2px);
+}
+
+.button:focus-visible,
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 4px;
+}
+
+/* MENU */
+
+.topbar {
+    background: #111;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #333;
+}
+
+.nav {
+    min-height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.brand img {
+    width: 53px;
+    height: 53px;
+    object-fit: contain;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    font-size: 13px;
+    text-decoration: none;
+    color: #eee;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+/* BANNER */
+
+.showcase {
+    background: #151515;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.slides {
+    position: relative;
+}
+
+.slide {
+    display: none;
+    animation: fade .6s ease;
+}
+
+.slide.is-active {
+    display: block;
+}
+
+@keyframes fade {
+    from { opacity: .25; }
+    to { opacity: 1; }
+}
+
+/* ALTERAÇÃO: MAIS ESPAÇO PARA A FOTO */
+
+.slide-grid {
+    min-height: 590px;
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    align-items: center;
+    gap: 45px;
+    padding-top: 55px;
+    padding-bottom: 75px;
+}
+
+.slide-copy {
+    min-width: 0;
+}
+
+/* ALTERAÇÃO: TÍTULO MENOR */
+
+.slide-copy h1,
+.slide-copy h2 {
+    font-size: clamp(32px, 3.4vw, 49px);
+    line-height: 1.18;
+    color: white;
+    margin: 22px 0;
+}
+
+.slide-copy p {
+    color: #ddd;
+    font-size: 18px;
+    max-width: 550px;
+    margin-bottom: 30px;
+}
+
+.slide-cover {
+    display: block;
+    max-height: 440px;
+    width: 100%;
+    object-fit: contain;
+    margin: auto;
+}
+
+/* FOTO DO BANNER AMPLIADA */
+
+.slide-photo {
+    width: 100%;
+    height: 440px;
+    max-height: none;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+}
+
+.slide-symbol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* ALTERAÇÃO: FOTO DO PRIMEIRO BANNER */
+
+.slide-symbol img {
+    width: 100%;
+    height: 440px;
+    max-width: none;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+}
+
+.slide-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    padding: 0 0 26px;
+}
+
+.slide-controls > button {
+    background: transparent;
+    color: white;
+    border: 1px solid #666;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    font-size: 24px;
+}
+
+/* O PROJETO */
+
+.intro-project {
+    background: white;
+}
+
+.intro-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    color: #505050;
+    font-size: 17px;
+}
+
+.intro-columns p {
+    margin-bottom: 0;
+}
+
+/* COMO FUNCIONA */
+
+.how-section {
+    background: var(--dark);
+    color: white;
+}
+
+.how-section h2 {
+    color: white;
+}
+
+.how-intro {
+    max-width: 800px;
+    color: #d5d5d5;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+
+.how-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.how-card {
+    background: #222;
+    border: 1px solid #383838;
+    border-radius: 8px;
+    padding: 32px;
+}
+
+.how-card svg {
+    width: 34px;
+    height: 34px;
+    stroke: var(--gold);
+    fill: none;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    margin-bottom: 15px;
+}
+
+.how-card h3 {
+    font-size: 21px;
+    color: white;
+    margin-bottom: 12px;
+}
+
+.how-card p {
+    color: #c8c8c8;
+    margin: 0;
+}
+
+.how-footer {
+    margin-top: 45px;
+    border-top: 1px solid #444;
+    padding-top: 30px;
+    color: #ddd;
+}
+
+.how-footer strong {
+    color: var(--gold);
+}
+
+/* LIVROS */
+
+.books-section {
+    background: var(--light);
+}
+
+.book-feature {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    align-items: center;
+    gap: 70px;
+    margin-top: 50px;
+}
+
+.book-feature > img {
+    width: 100%;
+    max-height: 480px;
+    object-fit: contain;
+}
+
+.book-feature h3 {
+    font-size: clamp(30px, 4vw, 46px);
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+.book-feature p {
+    color: #555;
+    max-width: 550px;
+}
+
+/* IDEALIZADORA */
+
+.author-section {
+    background: #111;
+    color: white;
+}
+
+.author-layout {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.author-photo {
+    width: 100%;
+    height: 580px;
+    max-height: none;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+}
+
+.author-layout h2 {
+    color: white;
+}
+
+.author-layout p {
+    color: #d1d1d1;
+}
+
+.idealizadora-title {
+    color: #ffffff;
+    font-size: clamp(28px, 3vw, 40px);
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.idealizadora-title span {
+    color: var(--gold);
+}
+
+/* CONTATO */
+
+.contact-section {
+    text-align: center;
+}
+
+.contact-section p {
+    max-width: 720px;
+    margin: 0 auto 30px;
+    color: #555;
+}
+
+/* RODAPÉ */
+
+.footer {
+    background: #111;
+    color: white;
+    padding: 45px 0;
+    border-top: 1px solid #333;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-logo {
+    width: 75px;
+    object-fit: contain;
+}
+
+.footer p {
+    color: #ccc;
+    font-size: 13px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.footer-links a {
+    color: #ddd;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: var(--gold);
+}
+
+.footer-links small {
+    color: #999;
+}
+
+/* CELULAR */
+
+@media (max-width: 800px) {
+
+    .section {
+        padding: 65px 0;
+    }
+
+    .nav {
+        flex-direction: column;
+        justify-content: center;
+        padding: 12px 0;
+        gap: 12px;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .slide-grid {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding-top: 55px;
+        padding-bottom: 35px;
+        gap: 28px;
+    }
+
+    .slide-copy h1,
+    .slide-copy h2 {
+        font-size: clamp(30px, 7vw, 40px);
+    }
+
+    .slide-copy p {
+        font-size: 16px;
+    }
+
+    .slide-cover {
+        max-height: 320px;
+    }
+
+    .slide-photo,
+    .slide-symbol img {
+        height: auto;
+        max-height: 380px;
+        object-fit: contain;
+    }
+
+    .intro-columns,
+    .how-grid,
+    .book-feature,
+    .author-layout {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .how-card {
+        padding: 25px;
+    }
+
+    .book-feature {
+        gap: 35px;
+    }
+
+    .book-feature > img {
+        max-height: 360px;
+    }
+
+    .author-photo {
+        height: auto;
+        max-height: 520px;
+        object-fit: contain;
+    }
+
+    .idealizadora-title {
+        font-size: 30px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .slide {
+        animation: none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- MENU PRINCIPAL -->
+
+<header class="topbar">
+    <div class="shell nav">
+
+        <a class="brand" href="#inicio">
+            <img src="imagens/logo-tp.png" alt="Marca oficial TP">
+            <span>PROJETO TEM PEIXE</span>
+        </a>
+
+        <nav aria-label="Navegação principal">
+            <a href="#projeto">O Projeto</a>
+            <a href="#como-funciona">Como Funciona</a>
+            <a href="#livros">Livros</a>
+            <a href="#idealizadora">A Idealizadora</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+    </div>
+</header>
+
+<main id="inicio">
+
+<!-- BANNER ROTATIVO -->
+
+<section class="showcase" aria-label="Destaques do Projeto Tem Peixe">
+
+    <div class="slides" id="slides">
+
+        <!-- BANNER 1: EXPERIÊNCIA E CONEXÕES -->
+
+        <article class="slide is-active" aria-hidden="false">
+            <div class="shell slide-grid">
+
+                <div class="slide-copy">
+
+                    <span class="eyebrow">
+                        NEGÓCIOS, PESSOAS E OPORTUNIDADES
+                    </span>
+
+                    <h1>
+                        Grandes conexões<br>
+                        <em>também acontecem fora do escritório.</em>
+                    </h1>
+
+                    <p>
+                        Uma proposta para empresários, líderes
+                        e grupos que desejam compartilhar
+                        conhecimento, fortalecer relacionamentos
+                        e viver algo diferente.
+                    </p>
+
+                    <a class="button" href="#projeto">
+                        Conheça o projeto ↗
+                    </a>
+
+                </div>
+
+                <div class="slide-symbol">
+                    <img
+                        src="imagens/conexoes-fora-escritorio.JPEG"
+                        alt="Grupo reunido em uma experiência no Pantanal"
+                        fetchpriority="high"
+                    >
+                </div>
+
+            </div>
+        </article>
+
+        <!-- BANNER 2: PRÉ-LANÇAMENTO DO LIVRO -->
+
+        <article class="slide" aria-hidden="true">
+            <div class="shell slide-grid">
+
+                <div class="slide-copy">
+
+                    <span class="eyebrow">
+                        PRÉ-LANÇAMENTO DO LIVRO
+                    </span>
+
+                    <h2>
+                        Tem Peixe.<br>
+                        <em>Você sabe Pescar?</em>
+                    </h2>
+
+                    <p>
+                        Isso não será sobre pescaria.
+                        Pelo menos, não apenas sobre ela.
+                    </p>
+
+                    <a class="button" href="livro/index.html">
+                        Conheça o livro ↗
+                    </a>
+
+                </div>
+
+                <img
+                    class="slide-cover"
+                    src="imagens/capa-original.png"
+                    alt="Capa original do livro Tem Peixe. Você sabe Pescar?"
+                    loading="lazy"
+                >
+
+            </div>
+        </article>
+
+    </div>
+
+    <!-- CONTROLES DO BANNER: APENAS SETAS -->
+
+    <div class="slide-controls shell">
+
+        <button
+            type="button"
+            id="prev-slide"
+            aria-label="Banner anterior"
+        >‹</button>
+
+        <button
+            type="button"
+            id="next-slide"
+            aria-label="Próximo banner"
+        >›</button>
+
+    </div>
+
+</section>
+
+<!-- O PROJETO -->
+
+<section id="projeto" class="section intro-project">
+    <div class="shell">
+
+        <span class="eyebrow">O PROJETO</span>
+
+        <h2>
+            Nem toda história de pescador<br>
+            é sobre <em>peixe.</em>
+        </h2>
+
+        <div class="intro-columns">
+
+            <p>
+                O Projeto Tem Peixe nasce da conexão entre
+                o universo da pescaria e os desafios do mundo
+                empresarial. A proposta é reunir pessoas que
+                desejam aprender, compartilhar experiências
+                e desenvolver novas perspectivas sobre
+                liderança, vendas, marketing, estratégia
+                e relacionamento humano.
+            </p>
+
+            <p>
+                Mais do que um encontro de negócios ou uma
+                pescaria, o projeto propõe uma experiência
+                que combina conhecimento, convivência e
+                situações vividas no rio. Uma oportunidade
+                para empresários, equipes e grupos de
+                networking saírem da rotina e enxergarem
+                seus desafios sob outros pontos de vista.
+            </p>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+
+<section id="como-funciona" class="section how-section">
+    <div class="shell">
+
+        <span class="eyebrow">COMO FUNCIONA</span>
+
+        <h2>
+            Uma experiência que vai além<br>
+            <em>da sala de treinamento.</em>
+        </h2>
+
+        <p class="how-intro">
+            Imagine reunir sua equipe, seus líderes ou
+            seu grupo de empresários para viver uma
+            experiência que conecta desenvolvimento
+            profissional, relacionamento e pescaria esportiva.
+            O Projeto Tem Peixe propõe encontros que abordam
+            liderança, vendas, marketing, estratégia e
+            comportamento humano, utilizando situações
+            da pescaria como analogias para os desafios
+            que enfrentamos nos negócios.
+        </p>
+
+        <div class="how-grid">
+
+            <!-- DESENVOLVIMENTO -->
+
+            <article class="how-card">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="9" cy="8" r="3"/>
+                    <path d="M3 20v-2a6 6 0 0 1 12 0v2"/>
+                    <path d="M17 5a3 3 0 0 1 0 6"/>
+                    <path d="M19 15a5 5 0 0 1 2 4v1"/>
+                </svg>
+
+                <h3>Desenvolvimento de equipes</h3>
+
+                <p>
+                    Uma oportunidade para trabalhar liderança,
+                    colaboração e desenvolvimento profissional
+                    fora do ambiente convencional.
+                </p>
+            </article>
+
+            <!-- ENCONTROS EMPRESARIAIS -->
+
+            <article class="how-card">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="3" y="7" width="18" height="14" rx="2"/>
+                    <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                    <path d="M3 13h18"/>
+                </svg>
+
+                <h3>Encontros empresariais</h3>
+
+                <p>
+                    Uma proposta para empresas, gestores
+                    e grupos de negócios que desejam
+                    combinar aprendizado, troca de experiências
+                    e integração.
+                </p>
+            </article>
+
+            <!-- NETWORKING -->
+
+            <article class="how-card">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M2 12l5-5 5 4 5-4 5 5"/>
+                    <path d="M7 7l4-3 4 3"/>
+                    <path d="M2 12l7 7a2 2 0 0 0 3 0l1-1"/>
+                    <path d="M22 12l-7 7a2 2 0 0 1-3 0"/>
+                </svg>
+
+                <h3>Networking</h3>
+
+                <p>
+                    Um ambiente para fortalecer relações,
+                    aproximar empresários e criar conexões
+                    que podem continuar muito além
+                    da experiência.
+                </p>
+            </article>
+
+            <!-- PESCARIA -->
+
+            <article class="how-card">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M3 12c4-6 11-7 17 0-6 7-13 6-17 0Z"/>
+                    <path d="M3 12l-2-4v8l2-4"/>
+                    <circle cx="16" cy="11" r="1"/>
+                    <path d="M7 12h6"/>
+                </svg>
+
+                <h3>Pescaria esportiva</h3>
+
+                <p>
+                    A experiência prática que conecta
+                    os temas trabalhados às situações
+                    da pescaria, como planejamento,
+                    paciência, estratégia e tomada de decisão.
+                </p>
+            </article>
+
+        </div>
+
+        <div class="how-footer">
+
+            <p>
+                O projeto também se apresenta por meio do livro
+                <strong>Tem Peixe. Você sabe Pescar?</strong>,
+                que amplia essas conexões entre a pescaria
+                e o mundo dos negócios.
+            </p>
+
+            <a class="button" href="#contato">
+                Tenho interesse na experiência ↗
+            </a>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- LIVROS -->
+
+<section id="livros" class="section books-section">
+    <div class="shell">
+
+        <span class="eyebrow">LIVROS</span>
+
+        <h2>
+            Histórias que começam<br>
+            <em>à beira do rio.</em>
+        </h2>
+
+        <div class="book-feature">
+
+            <img
+                src="imagens/mockup-livro-frente-verso.png"
+                alt="Mockup de frente e verso do livro Tem Peixe. Você sabe Pescar?"
+                loading="lazy"
+            >
+
+            <div>
+
+                <span class="eyebrow">
+                    PRIMEIRO LIVRO · PRÉ-LANÇAMENTO
+                </span>
+
+                <h3>
+                    Tem Peixe.<br>
+                    Você sabe Pescar?
+                </h3>
+
+                <p>
+                    Uma obra que conecta experiências da
+                    pescaria com o universo dos negócios,
+                    da liderança, do marketing, das vendas,
+                    das pessoas e das oportunidades.
+                </p>
+
+                <p>
+                    O livro está em preparação.
+                    Conheça a proposta e acompanhe
+                    as novidades do lançamento.
+                </p>
+
+                <a class="button" href="livro/index.html">
+                    Conheça o livro ↗
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- A IDEALIZADORA -->
+
+<section id="idealizadora" class="section author-section">
+    <div class="shell author-layout">
+
+        <img
+            class="author-photo"
+            src="imagens/foto-taynara.webp"
+            alt="Taynara Portela, idealizadora do Projeto Tem Peixe"
+            loading="lazy"
+        >
+
+        <div>
+
+            <span class="eyebrow">
+                QUEM ESTÁ POR TRÁS DO PROJETO
+            </span>
+
+            <h2 class="idealizadora-title">
+                A idealizadora<span>.</span>
+            </h2>
+
+            <h3 style="color: #d6a83e;">
+                Taynara Portela
+            </h3>
+
+            <p>
+                Com uma trajetória ligada ao marketing,
+                às vendas e ao relacionamento com pessoas,
+                Taynara encontrou no Pantanal
+                uma maneira diferente de observar
+                o universo dos negócios.
+            </p>
+
+            <p>
+                Entre conversas, histórias e experiências
+                de pescaria, surgiu a ideia de criar
+                um projeto que reunisse empresários,
+                líderes e equipes para aprender,
+                trocar conhecimentos e fortalecer
+                conexões fora dos ambientes
+                tradicionais de treinamento.
+            </p>
+
+            <p>
+                Assim nasceu o Projeto Tem Peixe:
+                uma proposta que conecta desenvolvimento
+                profissional, relacionamento e pescaria
+                esportiva em uma experiência pensada
+                para pessoas e negócios.
+            </p>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTATO -->
+
+<section id="contato" class="section contact-section">
+    <div class="shell">
+
+        <span class="eyebrow">CONTATO</span>
+
+        <h2>
+            Sua próxima experiência<br>
+            pode começar aqui.
+        </h2>
+
+        <p>
+            Quer conhecer melhor o Projeto Tem Peixe
+            ou avaliar uma experiência para sua empresa,
+            equipe ou grupo de networking?
+            Entre em contato para conversar sobre a proposta.
+        </p>
+
+        <!--
+        Substituir pelo contato comercial oficial
+        quando o canal estiver definido.
+        -->
+
+        <p>
+            <strong>
+                Em breve, informações sobre
+                os encontros e experiências.
+            </strong>
+        </p>
+
+    </div>
+</section>
+
+</main>
+
+<!-- RODAPÉ -->
+
+<footer class="footer">
+    <div class="shell footer-inner">
+
+        <div>
+
+            <img
+                class="footer-logo"
+                src="imagens/logo-tp.png"
+                alt="Marca oficial TP"
+            >
+
+            <p>
+                Projeto Tem Peixe<br>
+                Por Taynara Portela
+            </p>
+
+        </div>
+
+        <div class="footer-links">
+
+            <a href="#projeto">O Projeto</a>
+            <a href="#como-funciona">Como Funciona</a>
+            <a href="livro/index.html">O Livro</a>
+            <a href="privacidade.html">Política de privacidade</a>
+
+            <small>
+                © <span id="year"></span> Taynara Portela
+            </small>
+
+        </div>
+
+    </div>
+</footer>
+
+<script>
+(function () {
+
+    const slides = Array.from(
+        document.querySelectorAll(".slide")
+    );
+
+    const previous = document.getElementById("prev-slide");
+    const next = document.getElementById("next-slide");
+    const showcase = document.querySelector(".showcase");
+
+    let current = 0;
+    let timer = null;
+
+    function showSlide(index) {
+
+        if (!slides.length) return;
+
+        current = (index + slides.length) % slides.length;
+
+        slides.forEach((slide, i) => {
+            const active = i === current;
+
+            slide.classList.toggle("is-active", active);
+            slide.setAttribute("aria-hidden", String(!active));
+            slide.inert = !active;
+        });
+    }
+
+    function stopAutoPlay() {
+        if (timer !== null) {
+            clearInterval(timer);
+            timer = null;
+        }
+    }
+
+    function startAutoPlay() {
+        stopAutoPlay();
+
+        if (
+            slides.length < 2 ||
+            window.matchMedia(
+                "(prefers-reduced-motion: reduce)"
+            ).matches
+        ) {
+            return;
+        }
+
+        timer = setInterval(() => {
+            showSlide(current + 1);
+        }, 6500);
+    }
+
+    if (previous) {
+        previous.addEventListener("click", () => {
+            showSlide(current - 1);
+            startAutoPlay();
+        });
+    }
+
+    if (next) {
+        next.addEventListener("click", () => {
+            showSlide(current + 1);
+            startAutoPlay();
+        });
+    }
+
+    if (showcase) {
+
+        showcase.addEventListener(
+            "mouseenter",
+            stopAutoPlay
+        );
+
+        showcase.addEventListener(
+            "mouseleave",
+            startAutoPlay
+        );
+
+        showcase.addEventListener(
+            "focusin",
+            stopAutoPlay
+        );
+
+        showcase.addEventListener("focusout", event => {
+            if (!showcase.contains(event.relatedTarget)) {
+                startAutoPlay();
+            }
+        });
+    }
+
+    document.addEventListener("visibilitychange", () => {
+        if (document.hidden) {
+            stopAutoPlay();
+        } else {
+            startAutoPlay();
+        }
+    });
+
+    const year = document.getElementById("year");
+
+    if (year) {
+        year.textContent = new Date().getFullYear();
+    }
+
+    showSlide(0);
+    startAutoPlay();
+
+})();
+</script>
+
+</body>
+</html>
